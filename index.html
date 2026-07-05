@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -173,6 +174,12 @@
     border:1px solid color-mix(in srgb, var(--brand) 35%, var(--line));
     background:var(--bg-tint); border-radius:6px; padding:3px 8px;
   }
+  .int{
+    font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.12em;
+    text-transform:uppercase; color:var(--ink-soft);
+    border:1px solid var(--line);
+    background:var(--bg); border-radius:6px; padding:3px 8px;
+  }
   .card h3{ font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:17.5px; letter-spacing:-.01em; }
   .card p{ color:var(--ink-soft); font-size:14px; margin-top:-6px; }
 
@@ -293,6 +300,7 @@
     { name:'Apple Business Portal',         cat:'Operations',   mono:'AP', domain:'apple.com', desc:'Manage company Apple devices and apps.',      url:'https://business.apple.com' },
     { name:'GoDaddy',                       cat:'Operations',   mono:'GD', domain:'godaddy.com', desc:'Web hosting and domains.',                    url:'https://www.godaddy.com/en' },
     { name:'Wix',                           cat:'Operations',   mono:'WX', domain:'wix.com', desc:'Website builder and domain hosting.',         url:'https://manage.wix.com/account/websites?referralAdditionalInfo=Route' },
+    { name:'Agent Outreach',                cat:'Operations',   mono:'AO', desc:'Showroom and agent outreach tool.',           url:'https://ahmedcorev.github.io/showroom/', internal:true },
   ];
 
   const ORDER = ['Sales & CRM','Finance','People','Operations'];
@@ -328,7 +336,7 @@
             ${t.domain
               ? `<img class="tile tile-logo" alt="" loading="lazy" src="https://www.google.com/s2/favicons?domain=${t.domain}&sz=128" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'tile',textContent:'${t.mono}'}))">`
               : `<div class="tile">${t.mono}</div>`}
-            ${t.external ? '<span class="ext">External</span>' : ''}
+            ${t.external ? '<span class="ext">External</span>' : ''}${t.internal ? '<span class="int">Internal</span>' : ''}
           </div>
           <h3>${t.name}</h3>
           <p>${t.desc}</p>
