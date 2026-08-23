@@ -252,6 +252,7 @@
     <div class="controls">
       <button class="chip" aria-pressed="true" data-filter="all">All</button>
       <button class="chip" aria-pressed="false" data-filter="Sales &amp; CRM">Sales &amp; CRM</button>
+      <button class="chip" aria-pressed="false" data-filter="Marketing">Marketing</button>
       <button class="chip" aria-pressed="false" data-filter="Finance">Finance</button>
       <button class="chip" aria-pressed="false" data-filter="People">People</button>
       <button class="chip" aria-pressed="false" data-filter="Operations">Operations</button>
@@ -287,6 +288,7 @@
     { name:'Referral Program',              cat:'Sales & CRM',  mono:'RP', domain:'core-velocity.com', desc:'CoreV referral program details.',            url:'https://www.core-velocity.com/referral-program' },
     { name:'Referral Payout',               cat:'Sales & CRM',  mono:'PO', domain:'core-velocity.com', desc:'Track and manage referral payouts.',         url:'https://www.core-velocity.com/sales-admin' },
     { name:'CoreV Channels & Distribution', cat:'Sales & CRM',  mono:'CD', desc:'Manage distributors and sales channels.',     url:'https://CoreVelocity.github.io/distributor/' },
+    { name:'Brevo',                         cat:'Marketing',    mono:'BR', domain:'brevo.com', desc:'Email marketing and campaigns.',            url:'https://app.brevo.com/' },
     { name:'QuickBooks',                    cat:'Finance',      mono:'QB', domain:'quickbooks.intuit.com', desc:'Accounting, invoices, and bookkeeping.',       url:'https://accounts.intuit.com/app/sign-in?app_group=QBO&asset_alias=Intuit.accounting.core.qbowebapp&app_environment=prod&iux_redirect_reason=UNAUTHENTICATED' },
     { name:'OxeFit Finance Portal',         cat:'Finance',      mono:'FN', desc:'Budgets, reports, and financial controls.',    url:'https://CoreVelocity.github.io/Finance/' },
     { name:'Emirates NBD POS Dashboard',    cat:'Finance',      mono:'EN', domain:'emiratesnbdpay.com', desc:'Card payments and POS transactions.',       url:'https://oneapp.emiratesnbdpay.com/' },
@@ -305,7 +307,7 @@
     { name:'Agent Outreach',                cat:'Operations',   mono:'AO', desc:'Showroom and agent outreach tool.',           url:'https://CoreVelocity.github.io/showroom/', internal:true },
   ];
 
-  const ORDER = ['Sales & CRM','Finance','People','Operations'];
+  const ORDER = ['Sales & CRM','Marketing','Finance','People','Operations'];
   const board = document.getElementById('board');
   const countEl = document.getElementById('count');
   const emptyEl = document.getElementById('empty');
