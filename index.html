@@ -252,7 +252,9 @@
     <div class="controls">
       <button class="chip" aria-pressed="true" data-filter="all">All</button>
       <button class="chip" aria-pressed="false" data-filter="Sales &amp; CRM">Sales &amp; CRM</button>
+      <button class="chip" aria-pressed="false" data-filter="Demo">Demo</button>
       <button class="chip" aria-pressed="false" data-filter="Marketing">Marketing</button>
+      <button class="chip" aria-pressed="false" data-filter="Reporting">Reporting</button>
       <button class="chip" aria-pressed="false" data-filter="Finance">Finance</button>
       <button class="chip" aria-pressed="false" data-filter="People">People</button>
       <button class="chip" aria-pressed="false" data-filter="Operations">Operations</button>
@@ -281,18 +283,19 @@
   const TOOLS = [
     { name:'HubSpot',                       cat:'Sales & CRM',  mono:'HS', domain:'hubspot.com', desc:'CRM, deals, and marketing pipeline.',          url:'https://app-eu1.hubspot.com/contacts/146253341/objects/0-3/views/all/list' },
     { name:'OxeFit Sales Performance',      cat:'Sales & CRM',  mono:'SP', desc:'Track sales targets and rep performance.',     url:'https://CoreVelocity.github.io/sales/' },
-    { name:'OxeFit Weekly Report',          cat:'Sales & CRM',  mono:'WR', desc:'Weekly sales vs. commitment report.',          url:'https://corevelocity.github.io/oxefit-weekly-report/' },
+    { name:'OxeFit Weekly Report',          cat:'Reporting',    mono:'WR', desc:'Weekly sales vs. commitment report.',          url:'https://corevelocity.github.io/oxefit-weekly-report/' },
     { name:'Business Calculator & ROI',     cat:'Sales & CRM',  mono:'RO', desc:'Build quotes and model customer ROI.',         url:'https://CoreVelocity.github.io/Business_Calculator/', external:true },
     { name:'UAE vs. USA Pricing',           cat:'Sales & CRM',  mono:'UA', desc:'Compare consumer pricing: UAE vs USA.',       url:'https://corevelocity.github.io/UAEvsUS/' },
-    { name:'OxeFit OxeLead',                cat:'Sales & CRM',  mono:'OL', domain:'oxefit.com', desc:'Manage leads and the OxeFit app platform.',    url:'https://app.oxefit.com', external:true },
-    { name:'Marketing Lead Tracker',        cat:'Sales & CRM',  mono:'ML', domain:'docs.google.com', desc:'Shared sheet of marketing leads.',            url:'https://docs.google.com/spreadsheets/d/1we16JoRA43pVW5UpGajqDeKvWyQ5TyNQYUukpH3cY4I/edit?gid=0' },
+    { name:'OxeFit OxeLead',                cat:'Demo',         mono:'OL', domain:'oxefit.com', desc:'Manage leads and the OxeFit app platform.',    url:'https://app.oxefit.com', external:true },
+    { name:'Marketing Lead Tracker',        cat:'Marketing',    mono:'ML', domain:'docs.google.com', desc:'Shared sheet of marketing leads.',            url:'https://docs.google.com/spreadsheets/d/1we16JoRA43pVW5UpGajqDeKvWyQ5TyNQYUukpH3cY4I/edit?gid=0' },
     { name:'Referral Program',              cat:'Sales & CRM',  mono:'RP', domain:'core-velocity.com', desc:'CoreV referral program details.',            url:'https://www.core-velocity.com/referral-program' },
-    { name:'Referral Payout',               cat:'Sales & CRM',  mono:'PO', domain:'core-velocity.com', desc:'Track and manage referral payouts.',         url:'https://www.core-velocity.com/sales-admin' },
+    { name:'Referral Payout',               cat:'Operations',   mono:'PO', domain:'core-velocity.com', desc:'Track and manage referral payouts.',         url:'https://www.core-velocity.com/sales-admin' },
     { name:'CoreV Channels & Distribution', cat:'Sales & CRM',  mono:'CD', desc:'Manage distributors and sales channels.',     url:'https://CoreVelocity.github.io/distributor/' },
     { name:'Brevo',                         cat:'Marketing',    mono:'BR', domain:'brevo.com', desc:'Email marketing and campaigns.',            url:'https://app.brevo.com/' },
     { name:'QuickBooks',                    cat:'Finance',      mono:'QB', domain:'quickbooks.intuit.com', desc:'Accounting, invoices, and bookkeeping.',       url:'https://accounts.intuit.com/app/sign-in?app_group=QBO&asset_alias=Intuit.accounting.core.qbowebapp&app_environment=prod&iux_redirect_reason=UNAUTHENTICATED' },
     { name:'OxeFit Finance Portal',         cat:'Finance',      mono:'FN', desc:'Budgets, reports, and financial controls.',    url:'https://CoreVelocity.github.io/Finance/' },
     { name:'Emirates NBD POS Dashboard',    cat:'Finance',      mono:'EN', domain:'emiratesnbdpay.com', desc:'Card payments and POS transactions.',       url:'https://oneapp.emiratesnbdpay.com/' },
+    { name:'Tabby Business Center',         cat:'Finance',      mono:'TB', domain:'tabby.ai', desc:'Buy-now-pay-later merchant portal.',        url:'https://merchant.tabby.ai/' },
     { name:'OxeFit HR Portal',              cat:'People',       mono:'HR', desc:'Leave, payroll info, and people records.',     url:'https://CoreVelocity.github.io/CoreVHR/' },
     { name:'Careers',                       cat:'People',       mono:'CR', desc:'Job openings and referrals.',                 url:'https://corevelocity.github.io/careers/', external:true, internal:true },
     { name:'OxeFit Delivery & Spares',      cat:'Operations',   mono:'DS', desc:'Track deliveries and order spare parts.',      url:'https://CoreVelocity.github.io/CoreVDelivery/' },
@@ -308,7 +311,7 @@
     { name:'Agent Outreach',                cat:'Operations',   mono:'AO', desc:'Showroom and agent outreach tool.',           url:'https://CoreVelocity.github.io/showroom/', internal:true },
   ];
 
-  const ORDER = ['Sales & CRM','Marketing','Finance','People','Operations'];
+  const ORDER = ['Sales & CRM','Demo','Marketing','Reporting','Finance','People','Operations'];
   const board = document.getElementById('board');
   const countEl = document.getElementById('count');
   const emptyEl = document.getElementById('empty');
